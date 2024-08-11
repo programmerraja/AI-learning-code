@@ -1,0 +1,1399 @@
+Going to sample between 1 and 4 traces per predictor.
+Will attempt to bootstrap 16 candidate sets.
+Score: 0.0 for set: [0]
+New best sscore: 0.0 for seed -3
+Scores so far: [0.0]
+Best score: 0.0
+Score: 0.0 for set: [1]
+Scores so far: [0.0, 0.0]
+Best score: 0.0
+Bootstrapped 0 full traces after 1 examples in round 0.
+Score: 0.0 for set: [1]
+Scores so far: [0.0, 0.0, 0.0]
+Best score: 0.0
+Average of max per entry across top 1 scores: 0.0
+Average of max per entry across top 2 scores: 0.0
+Average of max per entry across top 3 scores: 0.0
+Average of max per entry across top 5 scores: 0.0
+Average of max per entry across top 8 scores: 0.0
+Average of max per entry across top 9999 scores: 0.0
+Bootstrapped 0 full traces after 1 examples in round 0.
+Score: 0.0 for set: [1]
+Scores so far: [0.0, 0.0, 0.0, 0.0]
+Best score: 0.0
+Average of max per entry across top 1 scores: 0.0
+Average of max per entry across top 2 scores: 0.0
+Average of max per entry across top 3 scores: 0.0
+Average of max per entry across top 5 scores: 0.0
+Average of max per entry across top 8 scores: 0.0
+Average of max per entry across top 9999 scores: 0.0
+Bootstrapped 0 full traces after 1 examples in round 0.
+Score: 0.0 for set: [1]
+Scores so far: [0.0, 0.0, 0.0, 0.0, 0.0]
+Best score: 0.0
+Average of max per entry across top 1 scores: 0.0
+Average of max per entry across top 2 scores: 0.0
+Average of max per entry across top 3 scores: 0.0
+Average of max per entry across top 5 scores: 0.0
+Average of max per entry across top 8 scores: 0.0
+Average of max per entry across top 9999 scores: 0.0
+Bootstrapped 0 full traces after 1 examples in round 0.
+Score: 100.0 for set: [1]
+New best sscore: 100.0 for seed 2
+Scores so far: [0.0, 0.0, 0.0, 0.0, 0.0, 100.0]
+Best score: 100.0
+Average of max per entry across top 1 scores: 1.0
+Average of max per entry across top 2 scores: 1.0
+Average of max per entry across top 3 scores: 1.0
+Average of max per entry across top 5 scores: 1.0
+Average of max per entry across top 8 scores: 1.0
+Average of max per entry across top 9999 scores: 1.0
+Bootstrapped 0 full traces after 1 examples in round 0.
+Score: 100.0 for set: [1]
+Scores so far: [0.0, 0.0, 0.0, 0.0, 0.0, 100.0, 100.0]
+Best score: 100.0
+Average of max per entry across top 1 scores: 1.0
+Average of max per entry across top 2 scores: 1.0
+Average of max per entry across top 3 scores: 1.0
+Average of max per entry across top 5 scores: 1.0
+Average of max per entry across top 8 scores: 1.0
+Average of max per entry across top 9999 scores: 1.0
+Bootstrapped 1 full traces after 1 examples in round 0.
+Score: 100.0 for set: [1]
+Scores so far: [0.0, 0.0, 0.0, 0.0, 0.0, 100.0, 100.0, 100.0]
+Best score: 100.0
+Average of max per entry across top 1 scores: 1.0
+Average of max per entry across top 2 scores: 1.0
+Average of max per entry across top 3 scores: 1.0
+Average of max per entry across top 5 scores: 1.0
+Average of max per entry across top 8 scores: 1.0
+Average of max per entry across top 9999 scores: 1.0
+Bootstrapped 1 full traces after 1 examples in round 0.
+Score: 100.0 for set: [1]
+Scores so far: [0.0, 0.0, 0.0, 0.0, 0.0, 100.0, 100.0, 100.0, 100.0]
+Best score: 100.0
+Average of max per entry across top 1 scores: 1.0
+Average of max per entry across top 2 scores: 1.0
+Average of max per entry across top 3 scores: 1.0
+Average of max per entry across top 5 scores: 1.0
+Average of max per entry across top 8 scores: 1.0
+Average of max per entry across top 9999 scores: 1.0
+Bootstrapped 1 full traces after 1 examples in round 0.
+Score: 100.0 for set: [1]
+Scores so far: [0.0, 0.0, 0.0, 0.0, 0.0, 100.0, 100.0, 100.0, 100.0, 100.0]
+Best score: 100.0
+Average of max per entry across top 1 scores: 1.0
+Average of max per entry across top 2 scores: 1.0
+Average of max per entry across top 3 scores: 1.0
+Average of max per entry across top 5 scores: 1.0
+Average of max per entry across top 8 scores: 1.0
+Average of max per entry across top 9999 scores: 1.0
+Bootstrapped 1 full traces after 1 examples in round 0.
+Score: 100.0 for set: [1]
+Scores so far: [0.0, 0.0, 0.0, 0.0, 0.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0]
+Best score: 100.0
+Average of max per entry across top 1 scores: 1.0
+Average of max per entry across top 2 scores: 1.0
+Average of max per entry across top 3 scores: 1.0
+Average of max per entry across top 5 scores: 1.0
+Average of max per entry across top 8 scores: 1.0
+Average of max per entry across top 9999 scores: 1.0
+Bootstrapped 1 full traces after 1 examples in round 0.
+Score: 100.0 for set: [1]
+Scores so far: [0.0, 0.0, 0.0, 0.0, 0.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0]
+Best score: 100.0
+Average of max per entry across top 1 scores: 1.0
+Average of max per entry across top 2 scores: 1.0
+Average of max per entry across top 3 scores: 1.0
+Average of max per entry across top 5 scores: 1.0
+Average of max per entry across top 8 scores: 1.0
+Average of max per entry across top 9999 scores: 1.0
+Bootstrapped 1 full traces after 1 examples in round 0.
+Score: 100.0 for set: [1]
+Scores so far: [0.0, 0.0, 0.0, 0.0, 0.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0]
+Best score: 100.0
+Average of max per entry across top 1 scores: 1.0
+Average of max per entry across top 2 scores: 1.0
+Average of max per entry across top 3 scores: 1.0
+Average of max per entry across top 5 scores: 1.0
+Average of max per entry across top 8 scores: 1.0
+Average of max per entry across top 9999 scores: 1.0
+Bootstrapped 1 full traces after 1 examples in round 0.
+Score: 100.0 for set: [1]
+Scores so far: [0.0, 0.0, 0.0, 0.0, 0.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0]
+Best score: 100.0
+Average of max per entry across top 1 scores: 1.0
+Average of max per entry across top 2 scores: 1.0
+Average of max per entry across top 3 scores: 1.0
+Average of max per entry across top 5 scores: 1.0
+Average of max per entry across top 8 scores: 1.0
+Average of max per entry across top 9999 scores: 1.0
+Bootstrapped 1 full traces after 1 examples in round 0.
+Score: 0.0 for set: [1]
+Scores so far: [0.0, 0.0, 0.0, 0.0, 0.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 0.0]
+Best score: 100.0
+Average of max per entry across top 1 scores: 1.0
+Average of max per entry across top 2 scores: 1.0
+Average of max per entry across top 3 scores: 1.0
+Average of max per entry across top 5 scores: 1.0
+Average of max per entry across top 8 scores: 1.0
+Average of max per entry across top 9999 scores: 1.0
+Bootstrapped 1 full traces after 1 examples in round 0.
+Score: 0.0 for set: [1]
+Scores so far: [0.0, 0.0, 0.0, 0.0, 0.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 0.0, 0.0]
+Best score: 100.0
+Average of max per entry across top 1 scores: 1.0
+Average of max per entry across top 2 scores: 1.0
+Average of max per entry across top 3 scores: 1.0
+Average of max per entry across top 5 scores: 1.0
+Average of max per entry across top 8 scores: 1.0
+Average of max per entry across top 9999 scores: 1.0
+Bootstrapped 0 full traces after 1 examples in round 0.
+Score: 0.0 for set: [1]
+Scores so far: [0.0, 0.0, 0.0, 0.0, 0.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 0.0, 0.0, 0.0]
+Best score: 100.0
+Average of max per entry across top 1 scores: 1.0
+Average of max per entry across top 2 scores: 1.0
+Average of max per entry across top 3 scores: 1.0
+Average of max per entry across top 5 scores: 1.0
+Average of max per entry across top 8 scores: 1.0
+Average of max per entry across top 9999 scores: 1.0
+Bootstrapped 0 full traces after 1 examples in round 0.
+Score: 0.0 for set: [1]
+Scores so far: [0.0, 0.0, 0.0, 0.0, 0.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 0.0, 0.0, 0.0, 0.0]
+Best score: 100.0
+Average of max per entry across top 1 scores: 1.0
+Average of max per entry across top 2 scores: 1.0
+Average of max per entry across top 3 scores: 1.0
+Average of max per entry across top 5 scores: 1.0
+Average of max per entry across top 8 scores: 1.0
+Average of max per entry across top 9999 scores: 1.0
+Bootstrapped 0 full traces after 1 examples in round 0.
+Score: 0.0 for set: [1]
+Scores so far: [0.0, 0.0, 0.0, 0.0, 0.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Best score: 100.0
+Average of max per entry across top 1 scores: 1.0
+Average of max per entry across top 2 scores: 1.0
+Average of max per entry across top 3 scores: 1.0
+Average of max per entry across top 5 scores: 1.0
+Average of max per entry across top 8 scores: 1.0
+Average of max per entry across top 9999 scores: 1.0
+19 candidate programs found.
+[('generate_answer', Predict(StringSignature(question, context -> rationale, answer
+    instructions='Answer questions using provided context.'
+    question = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'input', 'prefix': 'Question:', 'desc': '${question}'})
+    context = Field(annotation=str required=True json_schema_extra={'__dspy_field_type': 'input', 'prefix': 'Context:', 'desc': '${context}'})
+    rationale = Field(annotation=str required=True json_schema_extra={'prefix': "Reasoning: Let's think step by step in order to", 'desc': '${produce the answer}. We ...', '__dspy_field_type': 'output'})
+    answer = Field(annotation=str required=True json_schema_extra={'desc': 'A short factual answer', '__dspy_field_type': 'output', 'prefix': 'Answer:'})
+)))]
+s dict_keys(['question', 'context', 'rationale', 'answer'])
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+Answer: Mount Everest
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the answer in the provided context**. We read the context and see that it states "Mount Everest is the tallest mountain in the world".
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world. 
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to Question: What is the tallest mountain in the world? Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters. Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world. 
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to Question: What is the tallest mountain in the world? Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters. Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world. 
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to Question: What is the tallest mountain in the world? Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters. Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world. 
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to Question: What is the tallest mountain in the world? Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters. Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world. 
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to Question: What is the tallest mountain in the world? Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters. Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world. 
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to Question: What is the tallest mountain in the world? Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters. Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world. 
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to Question: What is the tallest mountain in the world? Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters. Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world. 
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+Answer: Mount Everest
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the answer in the provided context**. We read the context and see that it states "Mount Everest is the tallest mountain in the world".
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world. 
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to Question: What is the tallest mountain in the world? Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters. Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world. 
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to Question: What is the tallest mountain in the world? Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters. Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world. 
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to Question: What is the tallest mountain in the world? Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters. Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world. 
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to Question: What is the tallest mountain in the world? Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters. Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world. 
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to Question: What is the tallest mountain in the world? Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters. Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world. 
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to Question: What is the tallest mountain in the world? Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters. Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world. 
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to Question: What is the tallest mountain in the world? Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters. Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world.
+
+Answer: Mount Everest 
+[0m
+
+
+
+
+
+Answer questions using provided context.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Context: ${context}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: A short factual answer
+
+---
+
+Question: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to[32mQuestion: What is the tallest mountain in the world?
+
+Context: Mount Everest is the tallest mountain in the world, standing at 8,848 meters.
+
+Reasoning: Let's think step by step in order to **find the name of the tallest mountain**. We are given the context that Mount Everest is the tallest mountain in the world. 
+
+Answer: Mount Everest 
+[0m
+
+
+
