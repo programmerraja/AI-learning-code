@@ -1,0 +1,27 @@
+{
+  "test_cases_lookup_map": {
+    "{\"actual_output\": \"A blond drinking water in public.\", \"context\": [\"A man with blond-hair, and a brown shirt drinking out of a public water fountain.\"], \"expected_output\": null, \"hyperparameters\": null, \"input\": \"What was the blond doing?\", \"retrieval_context\": null}": {
+      "cached_metrics_data": [
+        {
+          "metric_data": {
+            "name": "Hallucination",
+            "threshold": 0.5,
+            "success": true,
+            "score": 0.0,
+            "reason": "The score is 0.00 because the output aligns perfectly with the context, as indicated by the lack of contradictions.",
+            "strictMode": false,
+            "evaluationModel": "Custom Google Model",
+            "evaluationCost": 0,
+            "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The actual output agrees with the context, both mention a blond drinking water in public.\"\n    }\n]"
+          },
+          "metric_configuration": {
+            "threshold": 0.5,
+            "evaluation_model": "Custom Google Model",
+            "strict_mode": false,
+            "include_reason": true
+          }
+        }
+      ]
+    }
+  }
+}

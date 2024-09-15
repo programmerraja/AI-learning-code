@@ -3,13 +3,16 @@ from dspy.datasets.gsm8k import GSM8K, gsm8k_metric
 from dspy.teleprompt import BootstrapFewShot
 from dspy.evaluate import Evaluate
 import os
+from dotenv import load_dotenv
 
-# 
+load_dotenv()
+
+#
 # Set up the LM.
 turbo = dspy.Google(
     # base_url="https://api.portkey.ai/v1/",
     model="gemini-1.5-flash-001",
-    api_key="",
+    api_key=os.getenv("GOOGLE_GEMENI_API_KEY"),
 )
 # from portkey_ai import Portkey
 

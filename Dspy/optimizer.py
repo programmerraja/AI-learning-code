@@ -1,14 +1,16 @@
 from dspy.teleprompt import MIPROv2
 import dspy.evaluate
 from dspy.datasets import HotPotQA
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 
-import dspy
 
 llm = dspy.Google(
     # base_url="https://api.portkey.ai/v1/",
     model="gemini-1.5-flash-001",
-    api_key="",
+    api_key=os.getenv("GOOGLE_GEMENI_API_KEY"),
 )
 
 print("LLM test response:", llm("hello there"))
@@ -95,3 +97,6 @@ compiled_rag = optimizer.compile(
 )
 
 compiled_rag.save("./optimized_model.json")
+
+
+# https://colab.research.google.com/drive/1Il47YSattSnWV5cfSzSD7b2rWuyv7n6O?usp=sharing#scrollTo=CcRQk4uQHImC

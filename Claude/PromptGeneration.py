@@ -580,7 +580,7 @@ def remove_inapt_floating_variables(prompt):
             messages=[
                 {
                     "role": "user",
-                    "content": remove_floating_variables_prompt.replace(
+                    "content": "remove_floating_variables_prompt".replace(
                         "{$PROMPT}", prompt
                     ),
                 }
