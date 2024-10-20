@@ -1,10 +1,13 @@
 import dspy
+import os
+from dotenv import load_dotenv
 
-# 
+load_dotenv()
+#
 turbo = dspy.Google(
     # base_url="https://api.portkey.ai/v1/",
     model="gemini-1.5-flash-001",
-    api_key="",
+    api_key=os.getenv("GOOGLE_GEMENI_API_KEY"),
 )
 
 dspy.settings.configure(lm=turbo)

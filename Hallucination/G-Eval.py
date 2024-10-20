@@ -41,6 +41,7 @@ custom_model = genai.GenerativeModel("gemini-1.5-flash-001")
 
 gemini = AzureOpenAI(model=custom_model)
 
+print(custom_model.generate_content("hai"))
 
 correctness_metric = GEval(
     name="Correctness",
