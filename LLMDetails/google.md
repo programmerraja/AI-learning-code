@@ -22,3 +22,7 @@
 ## Text embedding-001 (free)
 - Rate Limits
      1,500 RPM
+
+ ## Gemma
+ 
+ The Gemma family of open models includes a range of model sizes, capabilities, and task-specialized variations to help you build custom generative solutions. These are the main paths you can follow when using Gemma models in an application:
