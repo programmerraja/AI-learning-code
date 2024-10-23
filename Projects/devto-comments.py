@@ -4,11 +4,11 @@ from bs4 import BeautifulSoup
 from typing import Dict, Any, List
 
 import google.generativeai as genai
+from typing import Optional
+
 # followers-> 2721
 
 genai.configure(api_key=os.getenv("GOOGLE_GEMENI_API_KEY"))
-
-from typing import List, Optional, Dict, Any
 
 
 class Author:
@@ -180,9 +180,9 @@ class DevToCommenter:
             return
 
         comments_added_articles = []
-        
+
         print("TOTAL POST", len(myfeed.get("result")))
-        
+
         for article in myfeed.get("result", []):
             article_path = article.get("path")
             article_title = article.get("title")
