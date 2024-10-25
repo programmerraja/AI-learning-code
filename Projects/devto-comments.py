@@ -75,20 +75,23 @@ ARTICLE_HEAD_SELECTOR = "crayons-article__header"
 ARTICLE_BODY_SELECTOR = "crayons-article__main"
 
 DAILY_DEV_API_URL = "https://api.daily.dev/graphql"
-DAILY_DEV_COOKIE = os.environ.get("DAILY_DEV_COOKIE")
+DAILY_DEV_COOKIE = os.environ.get(
+    "DAILY_DEV_COOKIESS",
+)
 
 
 GEMINI_LLM = genai.GenerativeModel("gemini-1.5-flash-001")
 
 
 class DevToCommenter:
-    def __init__(self):
+    def __init__(self, page=1):
         self.api_url = DEVTO_API_URL
         self.auth_token = DEV_TO_TOKEN
         self.cookie = DEV_TO_COOKIE
         self.article_head_selector = ARTICLE_HEAD_SELECTOR
         self.article_body_selector = ARTICLE_BODY_SELECTOR
         self.llm = GEMINI_LLM
+        self.page = page
 
     def get_content(self, article_path: str) -> Dict[str, str]:
         try:
@@ -105,7 +108,7 @@ class DevToCommenter:
     def get_my_feed(self) -> Dict[str, Any]:
         try:
             response = requests.get(
-                f"{self.api_url}/search/feed_content?per_page=4&page=2&sort_by=hotness_score&sort_direction=desc&approved=&class_name=Article",
+                f"{self.api_url}/search/feed_content?per_page=10&page={self.page}&sort_by=hotness_score&sort_direction=desc&approved=&class_name=Article",
                 headers={"cookie": self.cookie},
             )
             response.raise_for_status()
@@ -195,14 +198,20 @@ class DevToCommenter:
                         article_title, article_content.get("article_body", "")
                     )
                 )
-                print(comment.text, f"{DEVTO_API_URL}/{article_path}")
+                print(comment.text, "\n", f"{DEVTO_API_URL}/{article_path}", "\n")
                 if (
                     comment.text
                     and "<No/>" not in comment.text
                     and "<no/>" not in comment.text
                 ):
-                    self.post_comment(comment.text, article_id, article_path)
-                    comments_added_articles.append(f"{DEVTO_API_URL}/{article_path}")
+                    user_input = input(
+                        f"Do you want to post this comment for the post titled '{article_title}'? (yes/no): "
+                    )
+                    if user_input.lower() == "yes":
+                        self.post_comment(comment.text, article_id, article_path)
+                        comments_added_articles.append(
+                            f"{DEVTO_API_URL}/{article_path}"
+                        )
 
         # print(comments_added_articles)
 
@@ -232,7 +241,7 @@ class DailyDev:
                 "variables": {
                     "version": 47,
                     "ranking": "POPULARITY",
-                    "first": 30,
+                    "first": 500,
                     "loggedIn": True,
                 },
             }
@@ -303,7 +312,7 @@ class DailyDev:
         # return
         # print(myfeed)
         if not myfeed or (not myfeed["data"]):
-            print("No feed data available.")
+            print("No feed data available.", myfeed)
             return
 
         comments_added_articles = []
@@ -326,13 +335,22 @@ class DailyDev:
                     and "<No/>" not in comment.text
                     and "<no/>" not in comment.text
                 ):
-                    print(self.post_comment(comment.text, node["id"]))
-                    print(comment.text, f"https://app.daily.dev/posts/{node['slug']}")
-                    comments_added_articles.append(
-                        f"https://app.daily.dev/posts/{node['slug']}"
+                    print(
+                        comment.text,
+                        f"https://app.daily.dev/posts/{node['slug']}\n",
                     )
+                    user_input = input(
+                        f"Do you want to post this comment for the post titled '{node['title']}'? (yes/no): "
+                    )
+                    if user_input.lower() == "yes":
+                        print(self.post_comment(comment.text, node["id"]), "\n")
+
+                        comments_added_articles.append(
+                            f"https://app.daily.dev/posts/{node['slug']}"
+                        )
 
 
 if __name__ == "__main__":
-    commenter = DevToCommenter()
+    commenter = DailyDev()
+    # commenter = DevToCommenter()
     commenter.main()
