@@ -108,7 +108,7 @@ class DevToCommenter:
     def get_my_feed(self) -> Dict[str, Any]:
         try:
             response = requests.get(
-                f"{self.api_url}/search/feed_content?per_page=10&page={self.page}&sort_by=hotness_score&sort_direction=desc&approved=&class_name=Article",
+                f"{self.api_url}/search/feed_content?per_page=3&page={self.page}&sort_by=hotness_score&sort_direction=desc&approved=&class_name=Article",
                 headers={"cookie": self.cookie},
             )
             response.raise_for_status()
@@ -241,8 +241,9 @@ class DailyDev:
                 "variables": {
                     "version": 47,
                     "ranking": "POPULARITY",
-                    "first": 500,
+                    "first": 50,
                     "loggedIn": True,
+                    # "withDiscussedPosts": True,
                 },
             }
 
@@ -286,13 +287,28 @@ class DailyDev:
             "variables": {"content": comment, "id": articel_id},
         }
 
+        upvote_post_body = {
+            "query": "\n  mutation Vote($id: ID!, $entity: UserVoteEntity!, $vote: Int!) {\n    vote(id: $id, entity: $entity, vote: $vote) {\n      _\n    }\n  }\n",
+            "variables": {"id": articel_id, "vote": 1, "entity": "post"},
+        }
         try:
             comment_response = requests.post(
                 f"{self.api_url}", json=comment_body, headers=headers
             ).json()
 
-            if comment_response and "erros" in comment_response:
-                print("error posting comments", comment_response["erros"])
+            upvote_response = requests.post(
+                f"{self.api_url}", json=upvote_post_body, headers=headers
+            ).json()
+
+            if (
+                comment_response
+                and "erros" in comment_response
+                or (upvote_response and "erros" in upvote_response)
+            ):
+                print(
+                    "error posting comments",
+                    comment_response["erros"] or upvote_response["erros"],
+                )
         except requests.RequestException as e:
             print(f"Error posting comment or like: {e}")
             return []
@@ -301,7 +317,7 @@ class DailyDev:
         return (
             f"Please generate a human-like comment for a blog post within 2 lines. "
             f"The comment should be relevant, thoughtful, and engaging. If you believe "
-            f"there is nothing substantial to say about the content, return an empty string represented as <No/> \n"
+            f"there is nothing substantial to say about the content or it other then english language, return an empty string represented as <No/> \n"
             f"The blog title is {article_title}\n "
             f"<blog> {article_content}</blog>"
         )
@@ -352,5 +368,6 @@ class DailyDev:
 
 if __name__ == "__main__":
     commenter = DailyDev()
-    # commenter = DevToCommenter()
+    commenter.main()
+    commenter = DevToCommenter()
     commenter.main()
