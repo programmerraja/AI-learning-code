@@ -9,7 +9,7 @@
       "type": "debugpy",
       "request": "launch",
       "justMyCode": false,
-      "program": "Projects/devto-comments.py",
+      "program": "Dev-to-challenge/structureoutput.py",
       "console": "integratedTerminal"
     }
   ]

@@ -4,10 +4,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 #
-turbo = dspy.Google(
-    # base_url="https://api.portkey.ai/v1/",
-    model="gemini-1.5-flash-001",
-    api_key=os.getenv("GOOGLE_GEMENI_API_KEY"),
+turbo = dspy.OllamaLocal(
+    base_url="http://127.0.0.1:8080",
+    model_type="chat"
 )
 
 dspy.settings.configure(lm=turbo)
