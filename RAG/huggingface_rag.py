@@ -9,3 +9,5 @@ client = InferenceClient(
 
 # feature_extraction -> will return embedding
 print(client.feature_extraction(text="hai"))
+
+
