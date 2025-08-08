@@ -108,7 +108,7 @@ class DevToCommenter:
     def get_my_feed(self) -> Dict[str, Any]:
         try:
             response = requests.get(
-                f"{self.api_url}/search/feed_content?per_page=3&page={self.page}&sort_by=hotness_score&sort_direction=desc&approved=&class_name=Article",
+                f"{self.api_url}/search/feed_content?per_page=10&page={self.page}&sort_by=hotness_score&sort_direction=desc&approved=&class_name=Article",
                 headers={"cookie": self.cookie},
             )
             response.raise_for_status()
@@ -141,7 +141,7 @@ class DevToCommenter:
         }
         comment_body = {
             "comment": {
-                "body_markdown": comment,
+                "body_markdown": comment.strip(),
                 "commentable_id": article_id,
                 "commentable_type": "Article",
             }
@@ -154,6 +154,7 @@ class DevToCommenter:
         }
 
         try:
+            print(comment_body)
             comment_response = requests.post(
                 f"{self.api_url}/comments", json=comment_body, headers=headers
             )
@@ -168,13 +169,14 @@ class DevToCommenter:
             return []
 
     def construct_prompt(self, article_title: str, article_content: str) -> str:
-        return (
-            f"Please generate a human-like comment for a blog post within 2 lines. "
-            f"The comment should be relevant, thoughtful, and engaging. If you believe "
-            f"there is nothing substantial to say about the content, return an empty string represented as <No/> \n"
-            f"The blog title is {article_title}\n "
-            f"<blog> {article_content}</blog>"
-        )
+        return f"""
+            (C) Context: You are asked to create a brief, relevant comment for a blog post. The comment should reflect a professional yet casual tone typical of an Indian software developer. It should not invite further discussion but still acknowledge the content in a thoughtful manner.
+            (O) Objective: Generate a short, insightful, and relevant two-line comment. If the content is insufficient to generate a meaningful response, return an empty string as <No/>.
+            (S) Style: The comment should be straightforward, clear, and to the point, with a tone that's polite and professional, but not overly formal.
+            (T) Tone: The tone should be neutral and professional, with a touch of casualness typical of a software developer from India—concise and focused on the content, without being overly elaborate or encouraging further conversation.
+            (A) Audience: The comment is for a general online audience, with an emphasis on people familiar with technical topics or a professional software development context.
+            (R) Response: A concise, relevant two-line comment or an empty string if the content lacks substance for a meaningful response.
+            The blog title is {article_title}, and here is the article content: <blog> {article_content}</blog>"""
 
     def main(self):
         myfeed = self.get_my_feed()
@@ -234,15 +236,27 @@ class DailyDev:
             print(f"Error fetching article content: {e}")
             return {}
 
-    def get_my_feed(self) -> Dict[str, Any]:
+    def get_my_feed(self, after) -> Dict[str, Any]:
         try:
+            most_popular_query = {
+                "query": '\n  query MostDiscussedFeed(\n    $loggedIn: Boolean! = false\n    $first: Int\n    $after: String\n    $period: Int\n    $supportedTypes: [String!] = ["article","share","freeform","video:youtube","collection"]\n    $source: ID\n    $tag: String\n  ) {\n    page: mostDiscussedFeed(first: $first, after: $after, period: $period, supportedTypes: $supportedTypes, source: $source, tag: $tag) {\n      ...FeedPostConnection\n    }\n  }\n  \n  fragment FeedPostConnection on PostConnection {\n    pageInfo {\n      hasNextPage\n      endCursor\n    }\n    edges {\n      node {\n        ...FeedPost\n        contentHtml\n        ...UserPost @include(if: $loggedIn)\n      }\n    }\n  }\n  \n  fragment FeedPost on Post {\n    ...FeedPostInfo\n    sharedPost {\n      id\n      title\n      image\n      readTime\n      permalink\n      commentsPermalink\n      createdAt\n      type\n      tags\n      private\n      source {\n        id\n        handle\n        permalink\n        image\n        type\n      }\n      slug\n      clickbaitTitleDetected\n      translation {\n        ...PostTranslateableFields\n      }\n    }\n    trending\n    feedMeta\n    collectionSources {\n      handle\n      image\n    }\n    numCollectionSources\n    updatedAt\n    slug\n  }\n  \n  fragment FeedPostInfo on Post {\n    id\n    title\n    image\n    readTime\n    permalink\n    commentsPermalink\n    createdAt\n    commented\n    bookmarked\n    views\n    numUpvotes\n    numComments\n    numAwards\n    summary\n    bookmark {\n      remindAt\n    }\n    author {\n      id\n      name\n      image\n      username\n      permalink\n      contentPreference {\n        status\n      }\n    }\n    type\n    tags\n    source {\n      id\n      handle\n      name\n      permalink\n      image\n      type\n      currentMember {\n        flags {\n          collapsePinnedPosts\n        }\n      }\n    }\n    userState {\n      vote\n      flags {\n        feedbackDismiss\n      }\n      awarded\n    }\n    slug\n    clickbaitTitleDetected\n    language\n    translation {\n      ...PostTranslateableFields\n    }\n  }\n  \n  fragment PostTranslateableFields on PostTranslation {\n    title\n    titleHtml\n    smartTitle\n    summary\n  }\n\n\n\n  \n  fragment UserPost on Post {\n    read\n    upvoted\n    commented\n    bookmarked\n    downvoted\n  }\n\n\n',
+                "variables": {
+                    "version": 65,
+                    "period": 7,
+                    "first": 9,
+                    "after": "",
+                },
+            }
             body = {
-                "query": '\n  query Feed(\n    $loggedIn: Boolean! = false\n    $first: Int\n    $after: String\n    $ranking: Ranking\n    $version: Int\n    $supportedTypes: [String!] = ["article","share","freeform","video:youtube","collection"]\n  ) {\n    page: feed(\n      first: $first\n      after: $after\n      ranking: $ranking\n      version: $version\n      supportedTypes: $supportedTypes\n    ) {\n      ...FeedPostConnection\n    }\n  }\n  \n  fragment FeedPostConnection on PostConnection {\n    pageInfo {\n      hasNextPage\n      endCursor\n    }\n    edges {\n      node {\n        ...FeedPost\n        contentHtml\n        ...UserPost @include(if: $loggedIn)\n      }\n    }\n  }\n  \n  fragment FeedPost on Post {\n    ...FeedPostInfo\n    sharedPost {\n      id\n      title\n      image\n      readTime\n      permalink\n      commentsPermalink\n      createdAt\n      type\n      tags\n      source {\n        id\n        handle\n        permalink\n        image\n      }\n      slug\n    }\n    trending\n    feedMeta\n    collectionSources {\n      handle\n      image\n    }\n    numCollectionSources\n    updatedAt\n    slug\n  }\n  \n  fragment FeedPostInfo on Post {\n    id\n    title\n    image\n    readTime\n    permalink\n    commentsPermalink\n    createdAt\n    commented\n    bookmarked\n    views\n    numUpvotes\n    numComments\n    summary\n    bookmark {\n      remindAt\n    }\n    author {\n      id\n      name\n      image\n      username\n      permalink\n    }\n    type\n    tags\n    source {\n      id\n      handle\n      name\n      permalink\n      image\n      type\n    }\n    userState {\n      vote\n      flags {\n        feedbackDismiss\n      }\n    }\n    slug\n  }\n\n  \n  fragment UserPost on Post {\n    read\n    upvoted\n    commented\n    bookmarked\n    downvoted\n  }\n\n\n',
+                "query": most_popular_query[
+                    "query"
+                ],  #'\n  query Feed(\n    $loggedIn: Boolean! = false\n    $first: Int\n    $after: String\n    $ranking: Ranking\n    $version: Int\n    $supportedTypes: [String!] = ["article","share","freeform","video:youtube","collection"]\n  ) {\n    page: feed(\n      first: $first\n      after: $after\n      ranking: $ranking\n      version: $version\n      supportedTypes: $supportedTypes\n    ) {\n      ...FeedPostConnection\n    }\n  }\n  \n  fragment FeedPostConnection on PostConnection {\n    pageInfo {\n      hasNextPage\n      endCursor\n    }\n    edges {\n      node {\n        ...FeedPost\n        contentHtml\n        ...UserPost @include(if: $loggedIn)\n      }\n    }\n  }\n  \n  fragment FeedPost on Post {\n    ...FeedPostInfo\n    sharedPost {\n      id\n      title\n      image\n      readTime\n      permalink\n      commentsPermalink\n      createdAt\n      type\n      tags\n      source {\n        id\n        handle\n        permalink\n        image\n      }\n      slug\n    }\n    trending\n    feedMeta\n    collectionSources {\n      handle\n      image\n    }\n    numCollectionSources\n    updatedAt\n    slug\n  }\n  \n  fragment FeedPostInfo on Post {\n    id\n    title\n    image\n    readTime\n    permalink\n    commentsPermalink\n    createdAt\n    commented\n    bookmarked\n    views\n    numUpvotes\n    numComments\n    summary\n    bookmark {\n      remindAt\n    }\n    author {\n      id\n      name\n      image\n      username\n      permalink\n    }\n    type\n    tags\n    source {\n      id\n      handle\n      name\n      permalink\n      image\n      type\n    }\n    userState {\n      vote\n      flags {\n        feedbackDismiss\n      }\n    }\n    slug\n  }\n\n  \n  fragment UserPost on Post {\n    read\n    upvoted\n    commented\n    bookmarked\n    downvoted\n  }\n\n\n',
                 "variables": {
                     "version": 47,
                     "ranking": "POPULARITY",
-                    "first": 50,
+                    "first": 10,
                     "loggedIn": True,
+                    "after": after if after else None,
                     # "withDiscussedPosts": True,
                 },
             }
@@ -313,61 +327,73 @@ class DailyDev:
             print(f"Error posting comment or like: {e}")
             return []
 
+    # def construct_prompt(self, article_title: str, article_content: str) -> str:
+    #     return (
+    #         f"Please generate a human-like comment for a blog post within 2 lines. "
+    #         f"The comment should be relevant, thoughtful. If you believe "
+    #         f"there is nothing substantial to say about the content or it other then english language, return an empty string represented as <No/> \n"
+    #         f"The blog title is {article_title}\n "
+    #         f"<blog> {article_content}</blog>"
+    #     )
+
     def construct_prompt(self, article_title: str, article_content: str) -> str:
         return (
-            f"Please generate a human-like comment for a blog post within 2 lines. "
-            f"The comment should be relevant, thoughtful, and engaging. If you believe "
-            f"there is nothing substantial to say about the content or it other then english language, return an empty string represented as <No/> \n"
-            f"The blog title is {article_title}\n "
-            f"<blog> {article_content}</blog>"
+            f"Please generate a short, human-like comment (within 2 lines) for the following blog post. "
+            f"The comment should be relevant and thoughtful "
+            f"If the content is trivial or not meaningful enough for a comment, or if it's not in English, return an empty string represented as <No/>. \n\n"
+            f"Blog Title: {article_title}\n"
+            f"Article Content:\n<blog>{article_content}</blog>"
         )
 
     def main(self):
-        myfeed = self.get_my_feed()
-        # print(self.post_comment(":)", "iQ3YtojCI"))
-        # return
-        # print(myfeed)
-        if not myfeed or (not myfeed["data"]):
-            print("No feed data available.", myfeed)
-            return
+        myfeed = {"data": {"page": {"pageInfo": {"hasNextPage": True, "endCursor": 0}}}}
 
-        comments_added_articles = []
-        print("Total post fetechd count", len(myfeed["data"]["page"]["edges"]))
-        for node in myfeed["data"]["page"]["edges"]:
-            # post posed on daily dev itself
-            node: Node = node["node"]
-            if (
-                node
-                and "contentHtml" in node
-                and "title" in node
-                and node["contentHtml"]
-                and node["title"]
-            ):
-                comment = self.llm.generate_content(
-                    self.construct_prompt(node["title"], node["contentHtml"])
-                )
+        while myfeed["data"]["page"]["pageInfo"]["hasNextPage"]:
+            myfeed = self.get_my_feed(myfeed["data"]["page"]["pageInfo"]["endCursor"])
+            # print(self.post_comment(":)", "iQ3YtojCI"))
+            # return
+            # print(myfeed)
+            if not myfeed or (not myfeed["data"]):
+                print("No feed data available.", myfeed)
+                return
+
+            comments_added_articles = []
+            print("Total post fetechd count", len(myfeed["data"]["page"]["edges"]))
+            for node in myfeed["data"]["page"]["edges"]:
+                # post posed on daily dev itself
+                node: Node = node["node"]
                 if (
-                    comment.text
-                    and "<No/>" not in comment.text
-                    and "<no/>" not in comment.text
+                    node
+                    and "contentHtml" in node
+                    and "title" in node
+                    and node["contentHtml"]
+                    and node["title"]
                 ):
-                    print(
-                        comment.text,
-                        f"https://app.daily.dev/posts/{node['slug']}\n",
+                    comment = self.llm.generate_content(
+                        self.construct_prompt(node["title"], node["contentHtml"])
                     )
-                    user_input = input(
-                        f"Do you want to post this comment for the post titled '{node['title']}'? (yes/no): "
-                    )
-                    if user_input.lower() == "yes":
-                        print(self.post_comment(comment.text, node["id"]), "\n")
-
-                        comments_added_articles.append(
-                            f"https://app.daily.dev/posts/{node['slug']}"
+                    if (
+                        comment.text
+                        and "<No/>" not in comment.text
+                        and "<no/>" not in comment.text
+                    ):
+                        print(
+                            comment.text,
+                            f"https://app.daily.dev/posts/{node['slug']}\n",
                         )
+                        user_input = input(
+                            f"Do you want to post this comment for the post titled '{node['title']}'? (yes/no): "
+                        )
+                        if user_input.lower() == "yes":
+                            print(self.post_comment(comment.text, node["id"]), "\n")
+
+                            comments_added_articles.append(
+                                f"https://app.daily.dev/posts/{node['slug']}"
+                            )
 
 
 if __name__ == "__main__":
     commenter = DailyDev()
     commenter.main()
-    commenter = DevToCommenter()
-    commenter.main()
+    # commenter = DevToCommenter()
+    # commenter.main()

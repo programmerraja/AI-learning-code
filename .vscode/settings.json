@@ -1,0 +1,39 @@
+{
+  //   // Linting Settings
+  //   "python.linting.enabled": true,
+  //   "python.linting.pylintEnabled": true,
+  //   "python.linting.flake8Enabled": false, // Enable if flake8 is your preference
+  //   "python.linting.mypyEnabled": true, // Type checking for production code
+  //   "python.linting.pylintArgs": [
+  //     "--disable=C0114", // Example: Disable missing module docstring
+  //     "--disable=C0116" // Example: Disable missing function docstring
+  //   ],
+
+  // Formatting Settings
+  "python.formatting.provider": "black",
+  "editor.formatOnSave": true,
+
+  // Test Settings
+  "python.testing.unittestEnabled": true,
+  "python.testing.pytestEnabled": true,
+  "python.testing.autoTestDiscoverOnSaveEnabled": false, // Disabled for performance in production
+
+  // General Editor Settings
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/*.pyo": true
+  },
+
+  // IntelliSense and Autocomplete
+  //   "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.diagnosticMode": "workspace",
+
+  // Debugging Settings
+  "debug.onTaskErrors": "abort",
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  }
+}

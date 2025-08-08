@@ -8,8 +8,8 @@
       "name": "Python Debugger: Current File",
       "type": "debugpy",
       "request": "launch",
+      "program": "${file}",
       "justMyCode": false,
-      "program": "Dev-to-challenge/structureoutput.py",
       "console": "integratedTerminal"
     }
   ]
