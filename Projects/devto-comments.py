@@ -5,7 +5,9 @@ from typing import Dict, Any, List
 
 import google.generativeai as genai
 from typing import Optional
+from dotenv import load_dotenv
 
+load_dotenv("../.env")
 # followers-> 2721
 
 genai.configure(api_key=os.getenv("GOOGLE_GEMENI_API_KEY"))
@@ -68,19 +70,17 @@ class Node:
 
 
 DEVTO_API_URL = "https://dev.to"
-DEV_TO_COOKIE = os.environ.get("DEV_TO_COOKIE")
-DEV_TO_TOKEN = os.environ.get("DEV_TO_TOKEN")
+DEV_TO_COOKIE = os.environ.get("DEV_TO_COOKIE","GA1.1.1019330267.1713703994; client_id=TG3c3opeZHa9z.9a929f86-a70c-431d-9215-8b0581d51466; user_experience_level=5; remember_user_token=eyJfcmFpbHMiOnsibWVzc2FnZSI6IlcxczBNekE1TVROZExDSjRhbnBIUW5oVVJUUlFORUoxTlcxNVUyMUJhU0lzSWpFM05UWXlOelF4TnpFdU9UQXdOalEwTlNKZCIsImV4cCI6IjIwMjYtMDItMjVUMDU6NTY6MTEuOTAwWiIsInB1ciI6ImNvb2tpZS5yZW1lbWJlcl91c2VyX3Rva2VuIn19--ce65768d4e26eed6738634f7352b3431577af18d; _Devto_Forem_Session=5ed6ab4845001d9dbeb41a46dc9f6490; ahoy_visitor=45f80380-095c-4dd5-b86b-e6ea051095eb; ahoy_visit=743d0ebc-e948-422a-b797-9feee7bd4154; _ga_TYEM8Y3JN3=GS2.1.s1758499630$o841$g1$t1758500630$j12$l0$h0")
+DEV_TO_TOKEN = os.environ.get("DEV_TO_TOKEN","Wp-RNWMfFgi7FCz6plLMTbdqn-GEjXCAzAlPTjTgJx3CuiN7PXXUx2a1Fv2XcjRw_4IediPMEdCmZuYoP2FNRA")
 
 ARTICLE_HEAD_SELECTOR = "crayons-article__header"
 ARTICLE_BODY_SELECTOR = "crayons-article__main"
 
 DAILY_DEV_API_URL = "https://api.daily.dev/graphql"
-DAILY_DEV_COOKIE = os.environ.get(
-    "DAILY_DEV_COOKIESS",
-)
+DAILY_DEV_COOKIE = os.environ.get("DAILY_DEV_COOKIESS","da2=NbQgWXH9JdceQ4lfD3WCY; _tracking_consent=%7B%22con%22%3A%7B%22CMP%22%3A%7B%22a%22%3A%22%22%2C%22m%22%3A%22%22%2C%22p%22%3A%22%22%2C%22s%22%3A%22%22%7D%7D%2C%22v%22%3A%222.1%22%2C%22region%22%3A%22INTN%22%2C%22reg%22%3A%22%22%2C%22purposes%22%3A%7B%22a%22%3Atrue%2C%22p%22%3Atrue%2C%22m%22%3Atrue%2C%22t%22%3Atrue%7D%2C%22display_banner%22%3Afalse%2C%22sale_of_data_region%22%3Afalse%7D; _shopify_y=b3a911c2-9625-40e0-be16-9ba67e8d506f; _ga=GA1.1.840969628.1722752906; _ga_Y94RMTGW0M=GS1.1.1732963253.7.0.1732963254.0.0.0; das=e5fa3ec3-3355-49ad-8842-54c05ece3fbe; _tt_enable_cookie=1; _ttp=01K0DK9WC6B44M6YXWAQ1EZR2X_.tt.1; ilikecookies=true; ory_kratos_session=MTc1Nzg5OTcwNHw5OUhXdGF1c2sxcDRheUdldWRKaW84c3pTR1RnVFlNLUNFREdsN3ZxTy03TV82ZUlHOGVLRHV0cm1uUWo5NnM0UFIxQ0dyRlZnLVR6UV9Sc3JncG9NOFVxTHk4NWJXUG8walpfbHhTWnhGZTN5b05LMlJYZGxMUTVSck9NM0tpT1Rvbk9MUzdyVkJfc1JJVURuem5PTS1XWU9IaWlkQTc3TWxlSGRyWGsweGc5QjlKYWFEbmJ6V2t2dk9GRENKdjdtTmRUcnoza21xNzhGdjJTWFl5b255Ul9UdTljRGZyTWZJNjREUGZ4b3hPaWRTbElVQUtCamk0MGc0Y3phdnU1MWprcFVYbnJMMjkxVEVpbXw5e4m4dioKOTnb4tZ1u6hjYjl9B0lSYcHmQ9EIGeLHTQ==; _rdt_uuid=1752803109031.7c49e1c8-c080-41ea-80c9-c5cb600f2db9; ttcsid=1758063330491::b2i_bCKd60nAeGMl85tI.2.1758063357432.0; ttcsid_CO2RCPBC77U37LT1TAIG=1758063330491::qabt9Cpk4LcPFUw9QSWT.2.1758063357749.0; _ga_VTGLXD7QSN=GS2.1.s1758063328$o2$g1$t1758063364$j24$l0$h0; da3=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTg1MDEwMjQuODgxLCJ1c2VySWQiOiJOYlFnV1hIOUpkY2VRNGxmRDNXQ1kiLCJyb2xlcyI6W10sImlzVGVhbU1lbWJlciI6ZmFsc2UsImlzUGx1cyI6ZmFsc2UsImlhdCI6MTc1ODUwMDEyNCwiYXVkIjoiRGFpbHkiLCJpc3MiOiJEYWlseSBBUEkifQ.tO-Vuo4YroeJ3l2NJxKiRysmm5j-TaAw_jb-BmVgjsblKjaTUwF8JXkIqn5ePIemCifCHl4X-Ue6nsDeSS27iNpp8_Tl_N8jld8kcBFtItOrjKIvYUHAtNdAjWQNopAd7NGlRfFh0gygUw0Nv4ZxRFBHnYeS9ZKvWjlZu3sIz7iojMJVP5J-yDSUHJ70ICdE_CNuSlBfrYigMhqV8925eROtetSpEYXxGJcMouTWFu1uTvBXgVkGhvUvb5uLwL-4w54k18yIDxe-2Mow4EN2N4TciDuvPRfRMz_N_T44cwrB_GYaz_IbGTvpxYtnk7fkrXceGhVGoJoc5urSb3R5YQ.MiidBW00cWLWGn0FUuMGkTH4gqkE5rPSbjzAdvvupMU")
 
 
-GEMINI_LLM = genai.GenerativeModel("gemini-1.5-flash-001")
+GEMINI_LLM = genai.GenerativeModel("models/gemini-1.5-flash")
 
 
 class DevToCommenter:
@@ -142,7 +142,7 @@ class DevToCommenter:
         comment_body = {
             "comment": {
                 "body_markdown": comment.strip(),
-                "commentable_id": article_id,
+                "commentable_id": str(article_id),
                 "commentable_type": "Article",
             }
         }
@@ -163,7 +163,7 @@ class DevToCommenter:
                 f"{self.api_url}/reactions", json=like_body, headers=headers
             )
             # like_response.raise_for_status()
-            return [comment_response.json(), like_response.json()]
+            return []
         except requests.RequestException as e:
             print(f"Error posting comment or like: {e}")
             return []
@@ -393,7 +393,7 @@ class DailyDev:
 
 
 if __name__ == "__main__":
-    commenter = DailyDev()
-    commenter.main()
-    # commenter = DevToCommenter()
+    # commenter = DailyDev()
     # commenter.main()
+    commenter = DevToCommenter()
+    commenter.main()
